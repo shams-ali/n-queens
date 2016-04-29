@@ -67,7 +67,7 @@ describe('solvers', function() {
 
   });
 
-  xdescribe('countNQueensSolutions()', function() {
+  describe('countNQueensSolutions()', function() {
 
     it('finds the number of valid solutions for n of 0-8', function() {
       _.range(0, 9).map(function(n) {
