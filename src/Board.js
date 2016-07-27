@@ -254,29 +254,29 @@
       return count > 1;
     },*/
 
-    // test if any minor diagonals on this board contain conflicts
-    // hasAnyMinorDiagonalConflicts: function() {
-    //   var test = false;
-    //   var that = this;
-    //   for (var i = 0; i < 7; i++) {
-    //     if (that.hasMinorDiagonalConflictAt(i)) {
-    //       test = true;
-    //     }
-    //   }
-    //   return test;
-    // }
+    //test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
-
+      var test = false;
       var size = this.get('n');
-
-      for ( var i = (size * 2) - 1; i >= 0; i-- ) {
-        if ( this.hasMinorDiagonalConflictAt(i) ) {
-          return true;
+      for (var i = 0; i < (size * 2) - 1; i++) {
+        if (this.hasMinorDiagonalConflictAt(i)) {
+          test = true;
         }
       }
-
-      return false;
+      return test;
     }
+    // hasAnyMinorDiagonalConflicts: function() {
+    //
+    //   var size = this.get('n');
+    //
+    //   for ( var i = (size * 2) - 1; i >= 0; i-- ) {
+    //     if ( this.hasMinorDiagonalConflictAt(i) ) {
+    //       return true;
+    //     }
+    //   }
+    //
+    //   return false;
+    // }
 
     /*--------------------  End of Helper Functions  ---------------------*/
 
